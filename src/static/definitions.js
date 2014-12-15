@@ -80,7 +80,7 @@ window.definitions = [
         "name": "Bijective Functions (Bijections)",
         "definition": "A function that associates each element of the codomain with a unique element of the domain.",
         "lecture": 10,
-        "slide": 91
+        "slide": 53
     },
     {
         "name": "Binary Operator",
@@ -133,6 +133,12 @@ window.definitions = [
         "definition": "The Cartesian Product $A \\times B$ is defined as $\\{(a, b) | a \\in A, b \\in B \\}$",
         "lecture": 11,
         "slide": 6
+    },
+    {
+        "name": "Certificate",
+        "definition": "If $w \\in L$ a string $c$ for which <a href=\"#Verifier\">Verifier</a> $V$ accepts $< w,c >$ is called a certificate for $w$", 
+        "lecture": 24,
+        "slide": 39
     },
     {
         "name": "Chromatic number",
@@ -213,11 +219,35 @@ window.definitions = [
         "slide": 14
     },
     {
+        "name": "Context Free Grammar",
+        "definition": "Formally, a context-free grammar is a collection of four objects: <ul><li>A set of nonterminal symbols (also called variables)</li><li>A set of terminal symbols (the alphabet of the CFG)</li><li>A set of production rules saying how each nonterminal can be converted by a string of terminals and nonterminals</li><li>A start symbol (which must be a nonterminal) that begins the derivation.</li></ul>",
+        "lecture": 18,
+        "slide": 6
+    },
+    {
+        "name": "Context Free Language",
+        "definition" : "A language L is called a context-free language (or CFL) if there is a CFG Gs uch that L = L(G).",
+        "lecture" : 18,
+        "slide" : 15
+    },
+    {
         "name": "Contrapositive",
         "definition": "The contrapositive of the statement &quot;p &#x2192; q&quot; is the statement &quot;&#xAC;q &#x2192; &#xAC;p&quot;.",
         "lecture": 8,
         "slide": 7
     },
+	{
+		"name": "Co-RE",
+		"definition": "Co-RE is a class of languages. A language L is in co-RE iff there is a TM M such that 1) if w is in L, then M does not reject w, and 2) if w is not in L, then M rejects w. A language L is in co-RE if and only if $\\bar{L}$ is in RE.",
+		"lecture": 23,
+		"slide": 30
+	},
+	{
+		"name": "Co-recognizable",
+		"definition": "A TM M whose language is co-RE is called a co-recognizer, and the language L is called co-recognizable.",
+		"lecture": 23,
+		"slide": 31
+	},
     {
         "name": "Cycle",
         "definition": "A cycle in a graph is a path from a node to itself.",
@@ -235,6 +265,12 @@ window.definitions = [
         "definition": "The following two equivalences are called De Morgan&apos;s Laws: $\\lnot(p \\land q) \\equiv \\lnot p \\lor \\not q$ and $\\lnot(p \\lor q) \\equiv \\lnot p \\land \\lnot q$.",
         "lecture": 7,
         "slide": 50
+    },
+    {
+        "name": "Derivation",
+        "definition": "A sequence of steps where nonterminals are replaced by the right-hand side of a production is called a derivation.",
+        "lecture": 18,
+        "slide": 10
     },
     {
         "name": "Deterministic Computation",
@@ -363,11 +399,23 @@ window.definitions = [
         "lecture": 6,
         "slide": 4
     },
+	{
+		"name": "HALT language",
+		"definition": "HALT is all encodings of M,w such that M is a TM that halts on w.",
+		"lecture": 23,
+		"slide": 7
+	},
     {
         "name": "Hasse Diagram",
         "definition": "A Hasse diagram is a graphical representation of a partial order, where elements are drawn below elements they&apos;re &quot;less&quot; than and above elements they&apos;re &quot;greater&quot; than.",
         "lecture": 12,
         "slide": 49
+    },
+    {
+	"name": "Halting Problem",
+	"definition": "Definied as: 'Given a TM M and a string w, does M halts on w?'. As a formal language, HALT = { âŸ¨M, wâŸ© | M is a TM that halts on w. }. HALT is not decideable, i.e. HALT $\\notin $ R",
+	"lecture": 22,
+	"slide": 35,
     },
     {
         "name": "Identity Element",
@@ -403,7 +451,13 @@ window.definitions = [
         "name": "Injective Functions (Injections)",
         "definition": "A function is called injective (or one-to-one) if each element of the codomain has at most one element of the domain that maps to it.",
         "lecture": 10,
-        "slide": 82
+        "slide": 48
+    },
+    {
+        "name": "Input Alphabet (Turing Machines)",
+        "definition": "The alphabet $\\Sigma$ in which all input strings for a Turing machine are written",
+        "lecture": 19,
+        "slide": 9
     },
     {
         "name": "Integers",
@@ -538,6 +592,18 @@ window.definitions = [
         "slide": 40
     },
     {
+        "name": "Nondeterministic Turing Machine",
+        "definition": "A <i>nondeterministic</i> Turing Machine (NTM) is a <a href=\"#Turing Machine\">Turing Machine</a> in which there can be zero or multiple transistions defined at each stage",  
+        "lecture": 25,
+        "slide": 9
+    },
+    {
+        "name": "NTMs and DTMs",
+        "definition":["If $L \\in \\textbf{RE}$ then there is a <a href=\"#Nondeterministic Turing Machine\">NTM</a> for $L$ ", "If $L$ is the language of an NTM then $L \\in \\textbf{RE}$"],
+        "lecture": 25,
+        "slide":24 
+    },
+    {
         "name": "Null Set",
         "definition": "A set which contains no elements is called a null set, also represented as $\\phi$.",
         "lecture": 0,
@@ -572,6 +638,30 @@ window.definitions = [
         "definition": "Functions specified with different rules applying to different elements.",
         "lecture": 10,
         "slide": 75
+    },
+    {
+        "name": "P",
+        "definition":"The complexity class $P$ contains all the problems that can be solved in polynomial time",
+        "lecture": 25,
+        "slide": 63
+    },
+    {
+        "name": "NP",
+        "definition":"The complexity class $NP$ contains all the problems where \"yes\" answers can be verfied efficiently (in polynomial time) by a computer",  
+        "lecture": 25,
+        "slide": 31
+    },
+    {
+        "name": "co-NP",
+        "definition":"The complexity class $co$ $NP$ contains all the problems where \"no\" answers can be verfied efficiently (in polynomial time) by a computer",  
+        "lecture": 25,
+        "slide": 31
+    },
+    {
+        "name": "Cobham-Edmonds Thesis",
+        "definition":"A language $L$ can be $\\textit{decided efficiently}$ if there is a $TM$ that decides it in polynomial time",
+        "lecture": 25,
+        "slide": 60
     },
     {
         "name": "Pigeonhole Principle",
@@ -661,10 +751,22 @@ window.definitions = [
         "slide": 29
     },
     {
+	"name": "Quine",
+	"definition": "A Quine is a program that, when run, prints its own source code.",
+	"lecture": 22,
+	"slide": 15
+    },
+    {
         "name": "Rational number",
         "definition": "A rational number is a number that can be written as $r = p/q$ where $p$ and $q$ are integers and $q\\neq 0$.",
         "lecture": 2,
         "slide": 49
+    },
+    {
+	"name": "Recursion Theorem",
+	"definition": "Informally, this says it's possible to construct TMs (like <a href=\"#Quine\">Quines</a>) that perform arbitrary computations on their own descriptions. Also called 'Kleene's second recursion theorem.'",
+	"lecture": 22,
+	"slide": 18
     },
     {
         "name": "Reflexive",
@@ -706,7 +808,7 @@ window.definitions = [
     },
     {
         "name": "Regular Language",
-        "definition": "A <a href=\"#Formal Language\">language</a> is called a regular language if there exists some DFA $D$ such that $\\mathscr{L}(D) = L$, or equivalently, if there exists some NFA $N$ such that $\\mathscr{L}(N) = L$",
+        "definition": "A <a href=\"#Formal Language\">language</a> is called a regular language if ,there exists some DFA $D$ such that $\\mathscr{L}(D) = L$, or equivalently, if there exists some NFA $N$ such that $\\mathscr{L}(N) = L$",
         "lecture": 14,
         "slide": 18
     },
@@ -777,7 +879,7 @@ window.definitions = [
         "name": "Surjective Functions (Surjections)",
         "definition": "A function is called surjective (or onto) if each element of the codomain has at least one element of the domain that maps to it.",
         "lecture": 10,
-        "slide": 87
+        "slide": 50
     },
     {
         "name": "Symmetric",
@@ -787,6 +889,18 @@ window.definitions = [
         ],
         "lecture": 12,
         "slide": 11
+    },
+    {
+        "name": "Tape Alphabet (Turing Machines)",
+        "definition": "The tape alphabet $\\Gamma$, is a superset of the input alphabet $\\Sigma\\subseteq\\Gamma$, that contains all symbols that can be written onto the tape. It can contain any number of symbols, but always contains at least one blank symbol, denoted by $\\Box$, that is guaranteed not to be in the input alphabet.",
+        "lecture": 19,
+        "slide": 9
+    },
+    {
+        "name": "Tape Head",
+        "definition": "A component of a Turing Machine that can read and write a single memory cell at a time",
+        "lecture": 19,
+        "slide": 7
     },
     {
         "name": "Total",
@@ -828,6 +942,12 @@ window.definitions = [
         "slide": 14
     },
     {
+        "name": "Turing Machine",
+        "definition": "A Turing Machine is a finite automaton equipped with an infinite tape as its memory. It consists of three parts: A finite-state control that issues commands, an infinite tape for input and scratch space, and a tape head that can read and write a single tape cell.",
+        "lecture": 19,
+        "slide": 7
+    },
+    {
         "name": "Universal Statement",
         "definition": "A universal statement is a statement of the form: &quot;For all $x$, $P(x)$ is true. The negation of an existential statement is an existential statement.",
         "lecture": 1,
@@ -846,6 +966,18 @@ window.definitions = [
         "slide": 42
     },
     {
+        "name": "Verifier",
+        "definition":["A <i>verifier</i> for a language is a Turing Machine $V$ with the following properties","$V$ is a decider i:e it halts on all inuts", "For any string $w$ $\\in$ $\\sum*$ it is true that", "$w \\in L$ iff $\\exists c \\in \\sum*. V$ accepts <$w$, $c$>" ],
+        "lecture": 25,
+        "slide": 4
+    },
+    {
+        "name": "Verifiers and RE",
+        "definition":["If there is a verifier $V$ for a language $L$ then $L \\in \\textbf{RE}$", "If $L \\in \\textbf{RE}$, then there is a verifier $V$ for it"], 
+        "lecture": 25,
+        "slide": 6
+    },
+    {
         "name": "Victory Chain",
         "definition": "A victory chain in a tournament is a way of lining up the players so that every player beats the player that comes after them.",
         "lecture": 4,
@@ -856,5 +988,220 @@ window.definitions = [
         "definition": "The exclusive or (called XOR for short), is a logical operator, denoted $\\bigoplus$,that operates on two bits and returns 0 if they are the same and 1 if they are different.",
         "lecture": 1,
         "slide": 48
-    }
+    },
+    {
+        "name": "Composite",
+        "definition": "A natural number n &geq; 2 is called composite if n can be written as p &middot; q for natural numbers p and q, neither of which is 1.",
+        "lecture": 20,
+        "slide": 11
+    },
+    {
+        "name": "Effective Method of Computation",
+        "definition": "Any form of computation with the following properties:<ul>"+
+          "<li>The computation consists of a set of steps.</li>"+
+          "<li>There are fixed rules governing how one step leads to the next.</li>"+
+          "<li>Any computation that yields an answer does so in finitely many steps."+
+          "<li>Any computation that yields an answer always yields the correct answer.</li></ul>",
+        "lecture": 20,
+        "slide": 51
+    },
+    {
+        "name": "Church-Turing Thesis",
+        "definition": "The hypothesis that every <a href=\"#Effective Method of Computation\">effective method of computation</a> is either equivalent to or weaker than a Turing machine.",
+        "lecture": 20,
+        "slide": 52
+    },
+    {
+        "name": "Language (of a Turing Machine)",
+        "definition": "The language of a Turing machine $M$, denoted $\\mathscr{L}(M)$, is the set of all strings that $M$ accepts: $$\\mathscr{L}(M) = \\{ w \\in \\Sigma^* \\mid M\\text{ accepts }w \\}$$",
+        "lecture": 20,
+        "slide": 65
+    },
+    {
+        "name": "Recognizable",
+        "definition": "A language is called recognizable if it is the <a href=\"#Language (of a Turing Machine)\">language of some Turing machine</a>.",
+        "lecture": 20,
+        "slide": 65
+    },
+    {
+        "name": "RE",
+        "definition": "The class RE is the set of all <a href=\"#Recognizable\">recognizable</a> languages.",
+        "lecture": 20,
+        "slide": 65
+    },
+    {
+        "name": "Recognizer",
+        "definition": "A Turing machine for a language L is sometimes called a recognizer for L.",
+        "lecture": 20,
+        "slide": 65
+    },
+    {
+        "name": "Decider",
+        "definition": "A decider is a Turing machine which halts on (that is, either accepts or rejects) every input string.",
+        "lecture": 21,
+        "slide": 15
+    },
+    {
+        "name": "Decidable",
+        "definition": ["A language L is decidable if there is a <a href=\"#Decider\">decider</a> M such that $\\mathscr{L}(M) = L$.",
+                       "In other words, a language L is decidable if there is a Turing machine which accepts all the strings in L and rejects every other string."],
+        "lecture": 21,
+        "slide": 16
+    },
+    {
+        "name": "R",
+        "definition": ["$\\textbf{R}$ is the set of all the <a href=\"#Decidable\">decidable</a> languages. $\\textbf{R}$ is a proper subset of <a href=\"#RE\">$\\textbf{RE}$</a>: all decidable languages are recognizable, but not all recognizable languages are decidable.",
+                       "In other words, $L \\in \\textbf{R}$ if there is a concrete algorithm which can determine for every string w whether $w \\in L$.",
+                       "All context-free languages (and therefore all regular languages) are in $\\textbf{R}$."],
+        "lecture": 21,
+        "slide": 16
+    },
+    {
+        "name": "Encoding",
+        "definition": ["Any finite, discrete object O can be encoded as a string, so that it can be analyzed and/or manipulated by a Turing machine.",
+                       "We denote the encoding of a single object $O$ by $\\langle O \\rangle$, and the encoding of multiple objects $O_1, O_2, O_3, \\ldots$ by $\\langle O_1, O_2, O_3, \\ldots \\rangle$.",
+                       "Any Turing machine can be encoded as a string over its own alphabet. (Analogously, programs are stored in binary, just like all the files they read.)"],
+        "lecture": 21,
+        "slide": 27
+    },
+    {
+        "name": "Universal Turing Machine",
+        "definition": ["There is a universal Turing machine, denoted $U_{TM}$, which, when run on input $\\langle M, w \\rangle$ for a machine M and string w, simulates the run of M on w: it accepts if M accepts, rejects if M rejects, and loops if M loops.",
+                       "$U_{TM}$ is effectively a Turing machine representing a general-purpose, programmable computer. Intuitively, its existence means that Turing machines can simulate other Turing machines (e.g. by calling $U_{TM}$ as a subroutine)."],
+        "lecture": 21,
+        "slide": 36
+    },
+    {
+        "name": "Acceptance Language",
+        "definition": ["$A_{TM}$ is the language of the <a href=\"#Universal Turing Machine\">universal Turing machine</a>. In other words, $A_{TM}$ = {$\\langle M, w\\rangle$ | M is a Turing machine that accepts w}.",
+                       "<a href=\"http://web.stanford.edu/class/cs103/lectures/22/Small22.pdf#page=25\">We proved</a> that $A_{TM} \\not \\in \\textbf{R}$ even though $A_{TM} \\in \\textbf{RE}$, proving that $\\textbf{R} \\neq \\textbf{RE}$."],
+        "lecture": 21,
+        "slide": 38
+    },
+    {
+        "name": "Diagonalization Language",
+        "definition": ["The diagonalization language, denoted $L_D$, is the language {$\\langle M \\rangle$ | $M$ is a Turing machine that does not accept $\\langle M \\rangle$}.",
+                       "<a href=\"http://web.stanford.edu/class/cs103/lectures/21/Small21.pdf#page=62\">We proved</a> that $L_D \\not \\in \\textbf{RE}$."],
+        "lecture": 21,
+        "slide": 61
+    },
+    {
+        "name": "Matching",
+        "definition": "Given an undirected graph $G$, a matching in G is a set of edges such that no two edges share an endpoint.",
+        "lecture": 27,
+        "slide": 8
+    },
+    {
+        "name": "Maximum Matching",
+        "definition": "A maximum matching is a <a href='#matching'>matching</a> with the largest number of edges.",
+        "lecture": 27,
+        "slide": 8
+    },
+    {
+        "name": "Polynomial-Time Reductions",
+        "definition": "A polynomial-time reduction from $A$ to $B$ is a function $f : \\Sigma^* \\rightarrow \\Sigma^*$ such that"
+            + "<ul>"
+            +   "<li>For any $w \\in \\Sigma^*, w \\in A$ iff $f(w) \\in B$</li>"
+            +   "<li>The function $f$ can be computed in polynomial time</li>"
+            + "</ul>",
+        "lecture": 27,
+        "slide": 30
+    },
+    {
+        "name": "Roasted Maple-Glazed Carrots with Thyme and Walnuts",
+        "definition": "Delicious, though of questionable nutritional value.",
+        "lecture": 27,
+        "slide": 45
+    },
+    {
+        "name": "Satisfiability",
+        "definition": "A propositional logic formula $\\phi$ is called satisfiable if there is some assignment to its variables that makes it evaluate to true",
+        "lecture": 27,
+        "slide": 72
+    },
+    {
+        "name": "Satisfying Assignment",
+        "definition": "An assignment of true and false to the variables of some propositional logic formula $\\phi$ that makes it evaluate to true is called a satisfying assignment. <br>Alternative definition: an enjoyable problem set.",
+        "lecture": 27,
+        "slide": 72
+    },
+    {
+        "name": "SAT",
+        "definition": "The boolean satisfiability problem (SAT) is the following: given a propositional logic formula $\\phi$, is $\\phi$ satisfiable?",
+        "lecture": 27,
+        "slide": 72
+    },
+    {
+        "name": "NP-hard",
+        "definition": "A language $L$ is called $NP$-hard if for every $L' \\in NP$, we have $L \\leq_p L$.",
+        "lecture": 27,
+        "slide": 66
+    },
+    {
+        "name": "NP-complete",
+        "definition": "A language $L$ is called $NP$-complete if $L$ is $NP$-hard and $L \\in NP$.",
+        "lecture": 27,
+        "slide": 67
+    },
+    {
+        "name": "Cook-Levin Theorem",
+        "definition": "SAT is $NP$-complete (see CS154 for proof).",
+        "lecture": 27,
+        "slide": 74
+    },
+    {
+        "name": "Literal",
+        "definition": "A literal in propositional logic is a variable or its negation.",
+        "lecture": 28,
+        "slide": 14
+    },
+    {
+        "name": "Clause",
+        "definition": "A clause is a many-way OR (disjunction) of literals.",
+        "lecture": 28,
+        "slide": 14
+    },
+    {
+        "name": "Conjunctive Normal Form (CNF)",
+        "definition": "A propositional logic formula $\\phi$ is in conjunctive normal form (CNF) if it is the many-way AND (conjunction) of clauses.",
+        "lecture": 28,
+        "slide": 15
+    },
+    {
+        "name": "3-CNF",
+        "definition": "A propositional formula is in 3-CNF if it is in CNF, and every clause has exactly three literals.",
+        "lecture": 28,
+        "slide": 19
+    },
+    {
+        "name": "3SAT",
+        "definition": ["The language 3SAT is defined as $\\{\\langle\\phi\\rangle \\,\\,|\\,\\, \\phi \\text{ is a satisfiable 3-CNF formula.}\\}$.",
+                      "3SAT is $NP$-complete."],
+        "lecture": 28,
+        "slide": 19
+    },
+    {
+        "name": "Independent Set",
+        "definition": "An independent set in an undirected graph is a set of nodes that have no edges between them.",
+        "lecture": 28,
+        "slide": 26
+    },
+    {
+        "name": "Independent Set Problem",
+        "definition": ["Given an undirected graph $G$ and a natural number $n$, the independent set problem is:",
+                        "Does $G$ contain an independent set of size at least $n$?", "This problem is $NP$-complete."],
+        "lecture": 28,
+        "slide": 27
+    },
+    {
+        "name": "3-Coloring Problem",
+        "definition": ["The 3-coloring problem is:",
+                        "Given an undirected graph $G$, is there a legal 3-coloring of its nodes?",
+                        "As a formal language:",
+                        "3COLOR = $\\{ \\langle G\\rangle \\,\\,|\\,\\, G \\text{is an undirected graph with a legal 3-coloring.} \\}$",
+                        "3COLOR is known to be $NP$-complete.",
+                        "See also: <a href=\"#k-colorable\">k-colorable</a>."],
+        "lecture": 28,
+        "slide": 27
+    },
 ];
