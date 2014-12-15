@@ -1,3 +1,9 @@
+// Instructions for future offerings of CS 103:
+// ============================================
+// Simply copy the entire directory containing this definitions.js file. If you
+// need to modify any of the Javascript besides this file, build instructions
+// and source code is available at https://github.com/drifkin/cs103-reference
+
 // Instructions to add more definitions:
 // =====================================
 //
