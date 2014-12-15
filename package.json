@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "browserify": "~6.2.0",
+    "gulp": "~3.8.9",
+    "gulp-notify": "~2.0.0",
+    "gulp-rename": "~1.2.0",
+    "gulp-uglify": "^1.0.1",
+    "gulp-util": "~3.0.1",
+    "reactify": "~0.15.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "~1.0.0",
+    "watchify": "~2.1.0"
+  }
+}
