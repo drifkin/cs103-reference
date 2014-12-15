@@ -22,7 +22,7 @@ To build, just run `gulp build`.
 # Usage
 
 After running the build step, there should be a directory called `build/`. Go
-to `build/definitions/` to read instructions and edit definitions. Then, simply
+to `build/definitions.js` to read instructions and edit definitions. Then, simply
 upload this directory to the class page and you should be good to go. Note that
 you only need to build the app if things other than the definitions were
 changed, otherwise just copying around the static files should be fine.
